@@ -112,3 +112,4 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
 };
 
 export default Navbar;
+
