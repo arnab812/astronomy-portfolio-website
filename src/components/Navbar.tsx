@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         <a href="/" className="flex items-center">
-          <h1 className="text-xl md:text-2xl font-bold text-mystic-gold">Logo</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-mystic-gold">Harmony Seeker</h1>
         </a>
 
         {/* Mobile menu button */}
