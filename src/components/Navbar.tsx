@@ -50,7 +50,7 @@ const Navbar = () => {
             Logo block
             */}
             <div className="flex flex-col items-center">
-              <span className="text-xs md:text-sm font-bold tracking-widest bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent whitespace-nowrap">HARMONY SEEKER</span>
+              <span className="text-xs md:text-sm font-bold tracking-widest bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent whitespace-nowrap">Cosmic Connections</span>
             </div>
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-mystic-gold to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
           </div>

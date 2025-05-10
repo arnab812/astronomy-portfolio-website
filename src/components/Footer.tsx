@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold text-mystic-gold mb-4">Harmony Seeker</h3>
+            <h3 className="text-2xl font-bold text-mystic-gold mb-4">Cosmic Connections</h3>
             <p className="text-cool-gray mb-4">
               Aligning your life with ancient wisdom of numbers, spaces, and stars.
             </p>
@@ -134,7 +134,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center mb-4">
               <Mail size={18} className="mr-2 text-mystic-gold" />
-              <span className="text-cool-gray">info@harmonyseeker.com</span>
+              <span className="text-cool-gray">info@cosmicconnections.com</span>
             </div>
             <div className="flex space-x-4">
               <a className="text-cool-gray hover:text-mystic-gold transition-colors">
@@ -151,7 +151,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-cool-gray">
-          <p>&copy; {new Date().getFullYear()} HarmonySeeker. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Cosmic Connections. All rights reserved.</p>
         </div>
       </div>
     </footer>
