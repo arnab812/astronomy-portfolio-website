@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold text-mystic-gold mb-4">HarmonySeeker</h3>
+            <h3 className="text-2xl font-bold text-mystic-gold mb-4">Harmony Seeker</h3>
             <p className="text-cool-gray mb-4">
               Aligning your life with ancient wisdom of numbers, spaces, and stars.
             </p>
