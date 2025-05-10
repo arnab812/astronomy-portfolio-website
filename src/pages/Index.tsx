@@ -30,10 +30,12 @@ const Index = () => {
 
             <div className="animate-fade-in opacity-0" style={{ animationDelay: '300ms' }}>
               {/*<h2 className="text-3xl md:text-4xl font-semibold mb-6">About <span className="text-mystic-gold">Our Expert</span></h2>*/}
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
-                Know About <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Our Expert</span>
-                <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
-              </h2>
+              <div className="text-center mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
+                  Know <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">About Our Expert</span>
+                  <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
+                </h2>
+              </div>
               <p className="text-cool-gray mb-4">
                 Welcome to HarmonySeeker, where ancient wisdom meets modern living. Our founder, with over 20 years of experience in Vedic sciences, has helped thousands transform their lives through the power of numbers, spaces, and celestial knowledge.
               </p>
