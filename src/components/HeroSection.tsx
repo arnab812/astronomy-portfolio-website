@@ -5,16 +5,16 @@ import { Calendar } from 'lucide-react';
 
 const slides = [
   {
-    bg: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop')",
+    bg: "url('https://images.unsplash.com/photo-1543604055-c4ca3f836063?q=80&w=1920&auto=format&fit=crop')",
   },
   {
-    bg: "url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1920&auto=format&fit=crop')",
+    bg: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop')",
   },
   {
     bg: "url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=1920&auto=format&fit=crop')",
   },
   {
-    bg: "url('https://images.unsplash.com/photo-1543604055-c4ca3f836063?q=80&w=1920&auto=format&fit=crop')",
+    bg: "url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1920&auto=format&fit=crop')",
   },
 ];
 
