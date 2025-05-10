@@ -102,8 +102,11 @@ const Vastu = () => {
 
       {/* Services Slider */}
       <section className="section">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-12">Our <span className="text-mystic-gold">Vastu Services</span></h2>
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-8">Our <span className="text-mystic-gold">Vastu Services</span></h2>
+          <p className="text-charcoal text-center max-w-2xl mx-auto mb-12">
+            Discover how ancient architectural wisdom can transform your spaces for better energy flow and harmony.
+          </p>
 
           <div className="animate-fade-in opacity-0" style={{ animationDelay: '100ms' }}>
             <VastuCardSlider services={services} />
@@ -113,7 +116,7 @@ const Vastu = () => {
 
       {/* How It Works - Timeline */}
       <section className="section bg-white">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">How It <span className="text-mystic-gold">Works</span></h2>
 
           <div className="max-w-3xl mx-auto">
@@ -133,7 +136,7 @@ const Vastu = () => {
 
       {/* Benefits */}
       <section className="section bg-dusty-lavender/10">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">Benefits of <span className="text-mystic-gold">Vastu Consultation</span></h2>
 
           <div className="grid md:grid-cols-3 gap-6">
