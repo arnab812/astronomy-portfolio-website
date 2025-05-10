@@ -150,7 +150,7 @@ const Contact = () => {
                       </a>
 
                       <a
-                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56042.54020538158!2d77.17333697039672!3d28.573184139767698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8367180c6de2ecc1!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1714548896396!5m2!1sen!2sin"
+                        href="https://maps.app.goo.gl/Bqj1cV1Y473NVddg8"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors inline-flex items-center justify-center"
@@ -261,7 +261,27 @@ const Contact = () => {
         </div>
       </section>
 
-
+      {/* Google Maps Section */}
+      <section className="section pb-16">
+        <div className="container mx-auto">
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <h2 className="text-2xl font-semibold mb-6 text-center">Find Us</h2>
+            <div className="w-full h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=new%20delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                aria-hidden="false"
+                tabIndex={0}
+                title="Google Maps - Our Location"
+                className="shadow-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
