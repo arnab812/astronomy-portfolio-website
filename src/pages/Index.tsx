@@ -26,10 +26,6 @@ const Index = () => {
                 alt="Spiritual Expert"
                 className="rounded-lg shadow-xl w-full max-w-md mx-auto"
               />
-              <div className="hidden md:block absolute -bottom-6 -right-6 bg-mystic-gold text-white p-4 rounded-lg shadow-lg">
-                <p className="font-bold">20+ Years</p>
-                <p className="text-sm">of Experience</p>
-              </div>
             </div>
 
             <div className="animate-fade-in opacity-0" style={{ animationDelay: '300ms' }}>
@@ -59,6 +55,7 @@ const Index = () => {
                   <div>
                     <p className="font-medium">1000+ Clients</p>
                     <p className="text-sm text-cool-gray">Worldwide</p>
+                    <p className="font-medium text-mystic-gold">20+ Years of Experience</p>
                   </div>
                 </div>
               </div>

@@ -1,10 +1,11 @@
 
 import { useState } from 'react';
-import { Calendar, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calendar, ChevronDown, ChevronUp, Calculator, FileText, Grid, Clock, Edit, Phone, Users, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import NumerologyCardSlider from '@/components/NumerologyCardSlider';
 
 interface ServiceCardProps {
   title: string;
@@ -20,7 +21,7 @@ const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-cool-gray mb-5">{description}</p>
-      <Link to="/contact" target='_blank' className="btn-primary inline-block text-sm">
+      <Link to="/contact" target='_blank' rel="noopener noreferrer" className="btn-primary inline-block text-sm">
         Book Now
       </Link>
     </div>
@@ -36,17 +37,19 @@ const FaqItem = ({ question, answer }: FaqItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200 py-4">
+    <div className="border-b border-gray-200 py-4 transition-all duration-300 hover:bg-soft-cream/30 rounded-lg px-4">
       <button
         className="flex w-full justify-between items-center text-left"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium text-lg">{question}</span>
-        {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        <span className={`font-medium text-lg transition-colors duration-300 ${isOpen ? 'text-mystic-gold' : 'text-charcoal'}`}>{question}</span>
+        <div className={`transition-all duration-300 transform ${isOpen ? 'bg-mystic-gold/10 text-mystic-gold rotate-180' : 'bg-gray-100 text-charcoal'} rounded-full p-1`}>
+          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        </div>
       </button>
       {isOpen && (
-        <div className="mt-3 text-cool-gray">
-          <p>{answer}</p>
+        <div className="mt-4 text-cool-gray overflow-hidden transition-all duration-500 max-h-96">
+          <p className="pb-2">{answer}</p>
         </div>
       )}
     </div>
@@ -134,31 +137,70 @@ const Numerology = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Section with Card Slider */}
       <section className="section">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-12">Our <span className="text-mystic-gold">Numerology Services</span></h2>
+          <h2 className="text-3xl font-semibold text-center mb-8">Our <span className="text-mystic-gold">Numerology Services</span></h2>
+          <p className="text-charcoal text-center max-w-2xl mx-auto mb-12">
+            Discover how the ancient science of numbers can bring clarity, harmony, and positive transformation to your life.
+          </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="animate-fade-in opacity-0" style={{ animationDelay: `${index * 100}ms` }}>
-                <ServiceCard
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                />
-              </div>
-            ))}
-          </div>
+          <NumerologyCardSlider
+            services={[
+              {
+                title: "Personality Number Analysis",
+                description: "Understand your core strengths, challenges, and life purpose through detailed birth number analysis.",
+                icon: <Calculator size={28} />
+              },
+              {
+                title: "Destiny Number Reading",
+                description: "Discover where your life path is leading you and how to optimize your journey.",
+                icon: <FileText size={28} />
+              },
+              {
+                title: "Grid Analysis (Lo-Shu)",
+                description: "In-depth analysis of your energy grid to identify strengths and areas for improvement.",
+                icon: <Grid size={28} />
+              },
+              {
+                title: "Dasha Calculation",
+                description: "Period-wise analysis of favorable and challenging times in your journey of life.",
+                icon: <Clock size={28} />
+              },
+              {
+                title: "Name Correction",
+                description: "Optimize your name's vibration to align with your birth energy and life path.",
+                icon: <Edit size={28} />
+              },
+              {
+                title: "Number Corrections",
+                description: "Harmonize your mobile, bank account, car, and house numbers for positive energy.",
+                icon: <Phone size={28} />
+              },
+              {
+                title: "Compatibility Checking",
+                description: "Analyze relationship compatibility based on number vibrations and energy patterns.",
+                icon: <Users size={28} />
+              },
+              {
+                title: "Remedies",
+                description: "Custom remedies to balance unfavorable numbers and enhance positive vibrations.",
+                icon: <Shield size={28} />
+              }
+            ]}
+          />
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="section bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-12">Frequently Asked <span className="text-mystic-gold">Questions</span></h2>
+          <h2 className="text-3xl font-semibold text-center mb-6">Frequently Asked <span className="text-mystic-gold">Questions</span></h2>
+          <p className="text-charcoal text-center max-w-2xl mx-auto mb-12">
+            Get answers to common questions about numerology and our services
+          </p>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6 md:p-8">
             {faqs.map((faq, index) => (
               <FaqItem key={index} question={faq.question} answer={faq.answer} />
             ))}
@@ -167,10 +209,18 @@ const Numerology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-mystic-gold text-white py-16">
+      <section className="bg-gradient-to-r from-mystic-gold to-mystic-gold/80 text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Need Your Numbers Corrected?</h2>
-          <Link to="/contact" target='_blank' className="px-8 py-3 bg-white text-mystic-gold rounded-lg hover:bg-gray-100 transition-colors inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Your Numbers Corrected?</h2>
+          <p className="text-white/90 max-w-2xl mx-auto mb-8">
+            Our expert numerologists can help you align your numbers with your life's purpose and energy.
+          </p>
+          <Link
+            to="/contact"
+            target='_blank'
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-white text-mystic-gold rounded-lg hover:bg-gray-100 transition-all duration-300 inline-block shadow-lg hover:shadow-xl hover:-translate-y-1 font-medium"
+          >
             Contact Now
           </Link>
         </div>
