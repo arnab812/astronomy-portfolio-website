@@ -31,7 +31,7 @@ const Index = () => {
             <div className="animate-fade-in opacity-0" style={{ animationDelay: '300ms' }}>
               {/*<h2 className="text-3xl md:text-4xl font-semibold mb-6">About <span className="text-mystic-gold">Our Expert</span></h2>*/}
               <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
-                Our<span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Expert</span>
+                About <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Our Expert</span>
                 <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
               </h2>
               <p className="text-cool-gray mb-4">
