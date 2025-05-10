@@ -89,7 +89,9 @@ const Index = () => {
                 description="Unlock the power of numbers in your life with personalized analysis and recommendations."
                 link="/numerology"
                 icon={Calendar}
-                external={true}  // 👈 added
+                external={true}
+                backgroundImage="/Numerology.png"
+                showBookNow={true}
               />
             </div>
 
@@ -99,7 +101,9 @@ const Index = () => {
                 description="Create harmony in your spaces with ancient architectural wisdom adapted for modern homes."
                 link="/vastu"
                 icon={Compass}
-                external={true}  // 👈 added
+                external={true}
+                backgroundImage="/Vastu.png"
+                showBookNow={true}
               />
             </div>
 
@@ -110,6 +114,7 @@ const Index = () => {
                 link="/astrology"
                 icon={Calendar}
                 comingSoon={true}
+                backgroundImage="/Astrology.png"
               />
             </div>
           </div>
