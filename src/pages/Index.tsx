@@ -29,7 +29,11 @@ const Index = () => {
             </div>
 
             <div className="animate-fade-in opacity-0" style={{ animationDelay: '300ms' }}>
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6">About <span className="text-mystic-gold">Our Expert</span></h2>
+              {/*<h2 className="text-3xl md:text-4xl font-semibold mb-6">About <span className="text-mystic-gold">Our Expert</span></h2>*/}
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
+                About <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Our Expert</span>
+                <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
+              </h2>
               <p className="text-cool-gray mb-4">
                 Welcome to HarmonySeeker, where ancient wisdom meets modern living. Our founder, with over 20 years of experience in Vedic sciences, has helped thousands transform their lives through the power of numbers, spaces, and celestial knowledge.
               </p>
@@ -68,7 +72,11 @@ const Index = () => {
       <section id="services" className="section bg-celestial-blue/10">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in opacity-0">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Our <span className="text-mystic-gold">Services</span></h2>
+            {/*<h2 className="text-3xl md:text-4xl font-semibold mb-4">Our <span className="text-mystic-gold">Services</span></h2>*/}
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
+              Our <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Services</span>
+              <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
+            </h2>
             <p className="text-cool-gray max-w-2xl mx-auto">
               Discover how ancient sciences can bring clarity, harmony, and positive transformation to your modern life.
             </p>
@@ -112,7 +120,11 @@ const Index = () => {
       <section id="why-us" className="section">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in opacity-0">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Why <span className="text-mystic-gold">Choose Us</span></h2>
+            {/*<h2 className="text-3xl md:text-4xl font-semibold mb-4">Why <span className="text-mystic-gold">Choose Us</span></h2>*/}
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
+              Why <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Choose Us</span>
+              <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
+            </h2>
             <p className="text-cool-gray max-w-2xl mx-auto">
               Our approach combines ancient wisdom with modern understanding to provide solutions that truly work.
             </p>
@@ -158,7 +170,11 @@ const Index = () => {
       <section id="testimonials" className="section bg-dusty-lavender/10">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in opacity-0">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Client <span className="text-mystic-gold">Testimonials</span></h2>
+            {/*<h2 className="text-3xl md:text-4xl font-semibold mb-4">Client <span className="text-mystic-gold">Testimonials</span></h2>*/}
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block tracking-wide">
+              Client <span className="text-mystic-gold bg-gradient-to-r from-mystic-gold to-amber-500 bg-clip-text text-transparent">Testimonials</span>
+              <span className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-gradient-to-r from-mystic-gold to-amber-500 rounded-full"></span>
+            </h2>
             <p className="text-cool-gray max-w-2xl mx-auto">
               Don't just take our word for it – hear from those whose lives have been transformed.
             </p>

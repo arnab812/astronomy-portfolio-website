@@ -4,27 +4,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-}
-
-const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
-  return (
-    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      <div className="h-14 w-14 rounded-full bg-dusty-lavender/20 flex items-center justify-center mb-4 text-mystic-gold">
-        {icon}
-      </div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-cool-gray mb-5">{description}</p>
-      <Link to="/contact" target='_blank' className="btn-primary inline-block text-sm">
-        Schedule Visit
-      </Link>
-    </div>
-  );
-};
+import VastuCardSlider from '@/components/VastuCardSlider';
 
 interface TimelineStepProps {
   number: number;
@@ -120,21 +100,13 @@ const Vastu = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Slider */}
       <section className="section">
         <div className="container mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-12">Our <span className="text-mystic-gold">Vastu Services</span></h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="animate-fade-in opacity-0" style={{ animationDelay: `${index * 100}ms` }}>
-                <ServiceCard
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                />
-              </div>
-            ))}
+          <div className="animate-fade-in opacity-0" style={{ animationDelay: '100ms' }}>
+            <VastuCardSlider services={services} />
           </div>
         </div>
       </section>
