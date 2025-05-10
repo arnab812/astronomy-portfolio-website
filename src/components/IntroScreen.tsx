@@ -117,7 +117,7 @@ const IntroScreen = ({ onIntroComplete }: IntroScreenProps) => {
       {/* Logo Video */}
       <div
         ref={logoContainerRef}
-        className="relative z-20 logo-container"
+        className="relative z-30 logo-container mx-auto"
         id="logo-animation-container"
       >
         <video
@@ -132,7 +132,7 @@ const IntroScreen = ({ onIntroComplete }: IntroScreenProps) => {
 
       {/* Animated Text */}
       <div
-        className={`relative z-20 mt-6 text-center transition-all duration-1000 ${
+        className={`relative z-30 mt-6 text-center transition-all duration-1000 ${
           textVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'
         }`}
       >
