@@ -3,6 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes arrowBounce {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @layer base {
   :root {
     --background: 60 40% 98%;
