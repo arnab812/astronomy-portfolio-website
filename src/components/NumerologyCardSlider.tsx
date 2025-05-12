@@ -13,7 +13,7 @@ interface NumerologyCardSliderProps {
 
 const NumerologyCardSlider = ({ services }: NumerologyCardSliderProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying] = useState(true); // Auto-play is always enabled
   const totalCards = services.length;
 
   // Handle navigation
@@ -31,7 +31,7 @@ const NumerologyCardSlider = ({ services }: NumerologyCardSliderProps) => {
 
     const interval = setInterval(() => {
       goToNextSlide();
-    }, 3000); // Rotate every 2 seconds
+    }, 3000); // Rotate every 3 seconds
 
     return () => clearInterval(interval);
   }, [activeIndex, isPlaying]);

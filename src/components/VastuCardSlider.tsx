@@ -55,9 +55,9 @@ const VastuCardSlider = ({ services }: VastuCardSliderProps) => {
   };
 
   return (
-    <div className="relative py-12 px-4 mx-auto max-w-5xl overflow-visible">
+    <div className="relative py-12 px-4 mx-auto max-w-5xl overflow-hidden">
       {/* Card Gallery */}
-      <div className="gallery relative h-[400px] overflow-visible mx-auto max-w-4xl">
+      <div className="gallery relative h-[400px] overflow-hidden mx-auto max-w-4xl">
         <div className="cards relative h-full flex justify-center items-center">
           {getVisibleCards().map(({ service, index, offset }) => {
             // Calculate card styling based on offset from active card
@@ -65,8 +65,7 @@ const VastuCardSlider = ({ services }: VastuCardSliderProps) => {
             const scale = isActive ? 1 : 0.8;
             const translateX = offset * 120; // Horizontal position
             const zIndex = 10 - Math.abs(offset); // Z-index (active card on top)
-            // Adjust opacity to prevent dark shadow effect on the left side
-            const opacity = Math.abs(offset) >= 2 ? 0.4 : (offset < 0 ? 0.8 : 1);
+            const opacity = Math.abs(offset) >= 2 ? 0.6 : 1;
 
             return (
               <div
@@ -89,12 +88,8 @@ const VastuCardSlider = ({ services }: VastuCardSliderProps) => {
                   style={{
                     background: isActive
                       ? 'linear-gradient(135deg, #D4AF37 0%, #C5A028 100%)'
-                      : offset < 0
-                        ? 'linear-gradient(135deg, #E6C55C 0%, #F0D78A 100%)' // Lighter gradient for left cards
-                        : 'linear-gradient(135deg, #C5A028 0%, #E6C55C 100%)',
-                    boxShadow: isActive
-                      ? '0 10px 25px -5px rgba(212, 175, 55, 0.4)'
-                      : (offset < 0 ? '0 2px 4px -2px rgba(0, 0, 0, 0.05)' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)')
+                      : 'linear-gradient(135deg, #C5A028 0%, #E6C55C 100%)',
+                    boxShadow: isActive ? '0 10px 25px -5px rgba(212, 175, 55, 0.4)' : '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
                   }}
                 >
                   <div className="text-center p-6 w-full h-full flex flex-col justify-center">
