@@ -9,7 +9,7 @@ import {
   FaEnvelope
 } from 'react-icons/fa';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // Navbar component with active page highlighting
 const Navbar = () => {
@@ -149,9 +149,9 @@ const NavLinks = ({ onClick, isMobile = false }: { onClick?: () => void; isMobil
           );
         } else {
           return (
-            <Link
+            <a
               key={link.to}
-              to={link.to}
+              href={link.to}
               target="_blank"
               className={`font-medium transition-all duration-300 hover:text-mystic-gold flex items-center py-3 px-4 min-h-[44px] relative no-underline
                 ${isMobile ? 'w-full justify-center hover:bg-mystic-gold/5 rounded-lg' : 'hover-glow hover:scale-110'}`}
@@ -161,7 +161,7 @@ const NavLinks = ({ onClick, isMobile = false }: { onClick?: () => void; isMobil
             >
               {link.icon}
               {link.label}
-            </Link>
+            </a>
           );
         }
       })}
