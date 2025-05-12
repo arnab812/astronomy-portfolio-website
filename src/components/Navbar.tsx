@@ -130,7 +130,22 @@ const NavLinks = ({ onClick, isMobile = false }: { onClick?: () => void; isMobil
         const absoluteUrl = `${baseUrl}${link.to}`;
 
         if (isActive) {
-          // Active link code remains the same
+          return (
+            <a
+              key={link.to}
+              href={link.to}
+              className={`font-medium text-mystic-gold flex items-center py-3 px-4 min-h-[44px] relative no-underline
+                ${isMobile ? 'w-full justify-center bg-mystic-gold/5 rounded-lg' : 'scale-110'}
+                after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-mystic-gold after:rounded-full`}
+              onClick={(e) => {
+                e.preventDefault(); // Prevent navigation since we're already on this page
+                if (onClick) onClick();
+              }}
+            >
+              {link.icon}
+              {link.label}
+            </a>
+          );
         } else {
           return (
             <a
