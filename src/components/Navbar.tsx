@@ -9,6 +9,8 @@ import {
   FaEnvelope
 } from 'react-icons/fa';
 
+import { Link } from 'react-router-dom';
+
 // Navbar component with active page highlighting
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -147,9 +149,9 @@ const NavLinks = ({ onClick, isMobile = false }: { onClick?: () => void; isMobil
           );
         } else {
           return (
-            <a
+            <Link
               key={link.to}
-              href={link.to}
+              to={link.to}
               target="_blank"
               rel="noopener noreferrer"
               className={`font-medium transition-all duration-300 hover:text-mystic-gold flex items-center py-3 px-4 min-h-[44px] relative no-underline
@@ -160,7 +162,7 @@ const NavLinks = ({ onClick, isMobile = false }: { onClick?: () => void; isMobil
             >
               {link.icon}
               {link.label}
-            </a>
+            </Link>
           );
         }
       })}
