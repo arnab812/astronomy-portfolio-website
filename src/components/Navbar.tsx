@@ -9,6 +9,7 @@ import {
   FaEnvelope
 } from 'react-icons/fa';
 
+// Navbar component with active page highlighting
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
